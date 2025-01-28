@@ -7,6 +7,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class usuariosService {
@@ -23,4 +25,8 @@ public class usuariosService {
                 mapper.map(DTO, Usuarios.class)
         );
     }
+
+    public List<Usuarios> findAll(){
+        return repository.findAll();
+    };
 }
