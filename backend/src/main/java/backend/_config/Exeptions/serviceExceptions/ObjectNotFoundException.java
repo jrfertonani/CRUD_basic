@@ -1,4 +1,4 @@
-package Back._config.Exeptions.serviceExceptions;
+package backend._config.Exeptions.serviceExceptions;
 
 public class ObjectNotFoundException extends RuntimeException{
     private static final long serialVersionUID = 1L;
