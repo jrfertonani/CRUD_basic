@@ -44,4 +44,9 @@ public class usuariosService {
                 mapper.map(DTO, Usuarios.class)
         );
     }
+
+    public void deleteById(Long id){
+        findById(id);
+        repository.deleteById(id);
+    }
 }
