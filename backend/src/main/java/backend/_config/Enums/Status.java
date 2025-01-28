@@ -1,16 +1,25 @@
 package backend._config.Enums;
 
+
 import lombok.Getter;
 
 @Getter
 public enum Status {
     // aqui são os enums
-    ANDAMENTO(0,"ANDAMENTO"),
-    ENCERRADO(1,"ENCERRADO");
+    ATIVO(0,"ATIVO"),
+    INATIVO(1,"INATIVO");
 
     //aqui as instancias
     private final Integer codigo;
     private final String descricao;
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 
     //aqui construtor
     Status(Integer codigo, String descricao) {
