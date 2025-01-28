@@ -53,4 +53,13 @@ public class usuariosResource {
         );
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<usuariosDTO> upDate(@PathVariable Long id,
+                                           @RequestBody usuariosDTO DTO){
+        DTO.setId(id);
+        Usuarios obj = service.upDate(id,DTO);
+        return ResponseEntity.ok().body(DTO);
+
+    }
+
 }
