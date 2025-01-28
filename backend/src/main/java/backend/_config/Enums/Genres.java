@@ -1,4 +1,4 @@
-package Back._config.Enums;
+package backend._config.Enums;
 
 import lombok.Getter;
 
