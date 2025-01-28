@@ -1,5 +1,6 @@
 package backend.service;
 
+import backend._config.Exeptions.serviceExceptions.ObjectNotFoundException;
 import backend.entity.DTO.usuariosDTO;
 import backend.entity.model.Usuarios;
 import backend.repository.usuariosRepository;
@@ -29,4 +30,11 @@ public class usuariosService {
     public List<Usuarios> findAll(){
         return repository.findAll();
     };
+
+    public Usuarios findById(Long id) {
+        return mapper.map(
+                repository.findById(id).orElseThrow(
+                        ()-> new ObjectNotFoundException("Usuario não encontrado ID: " + id)
+                ), Usuarios.class);
+    }
 }
