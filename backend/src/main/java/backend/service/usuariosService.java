@@ -37,4 +37,11 @@ public class usuariosService {
                         ()-> new ObjectNotFoundException("Usuario não encontrado ID: " + id)
                 ), Usuarios.class);
     }
+
+    public Usuarios upDate(Long id,usuariosDTO DTO){
+        findById(id);
+        return repository.save(
+                mapper.map(DTO, Usuarios.class)
+        );
+    }
 }
