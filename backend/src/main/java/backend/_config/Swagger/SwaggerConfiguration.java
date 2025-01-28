@@ -1,4 +1,4 @@
-package Back._config.Swagger;
+package backend._config.Swagger;
 
 
 import org.springframework.context.annotation.Configuration;
