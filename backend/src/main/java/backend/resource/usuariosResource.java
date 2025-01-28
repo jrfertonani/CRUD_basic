@@ -62,4 +62,10 @@ public class usuariosResource {
 
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<usuariosDTO> delete (@PathVariable Long id){
+        service.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
