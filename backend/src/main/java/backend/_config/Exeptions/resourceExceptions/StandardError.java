@@ -1,4 +1,4 @@
-package Back._config.Exeptions.resourceExceptions;
+package backend._config.Exeptions.resourceExceptions;
 
 import java.io.Serializable;
 
