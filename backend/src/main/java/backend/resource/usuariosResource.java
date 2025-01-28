@@ -46,4 +46,11 @@ public class usuariosResource {
         );
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuarios> findById(@PathVariable Long id){
+        return ResponseEntity.ok().body(
+                mapper.map( service.findById(id), Usuarios.class)
+        );
+    }
+
 }
