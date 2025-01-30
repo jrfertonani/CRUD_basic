@@ -21,3 +21,4 @@ Este projeto demonstra uma aplicação backend utilizando Spring Boot e MySql.
 
 2. Acesse a aplicação em:
 - http://localhost:8080
+
